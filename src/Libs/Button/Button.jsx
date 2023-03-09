@@ -1,8 +1,9 @@
 import './button.css'
 
 function Button({ownClass}) {
+  let customClass= ` button  ${ownClass}`
   return (
-    <button className="itemProduct__button button button--productItem">Добавить</button>
+    <button className={customClass}>Добавить</button>
   )
 }
 

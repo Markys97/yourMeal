@@ -1,6 +1,7 @@
 import './itemProduct.css';
 import Button from '../Button/Button';
 
+
 function ItemProduct() {
   return (
     <div className="itemProduct">
@@ -15,7 +16,7 @@ function ItemProduct() {
             <div className="itemProduct__quantity">
                 520г
             </div>
-          
+            <Button ownClass="itemProduct__button button--productItem"/>
         </div>
     </div>
   )
