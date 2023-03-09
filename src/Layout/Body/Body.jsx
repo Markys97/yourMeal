@@ -7,7 +7,8 @@ function Body() {
         <div className="main__container wrapper">
             <div className="main__content">
                 <div className="main__row">
-                    <aside className='main__left main__left--short'>
+                {/* main__left--short */}
+                    <aside className='main__left '>
                        <Card/>
                     </aside>
                     <section className="main__right main-body">

@@ -29,7 +29,7 @@ function Header() {
          </div>
           <div className="header__row">
             <div className="header__img">
-              <img src="/image/picture/pic.png" alt="burger" />
+              <img src="https://markys97.github.io/yourMeal/image/picture/pic.png" alt="burger" />
             </div>
             <div className="header__body">
                 <h1>

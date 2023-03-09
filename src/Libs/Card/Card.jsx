@@ -2,7 +2,7 @@ import './card.css';
 
 function Card() {
   return (
-    <div className="card">
+    <div className="card isOpen">
         <div className="card__content">
             <div className="card__head">
                 <div className="card__title">Корзина</div>
@@ -16,7 +16,7 @@ function Card() {
                         <div className="item-card__row">
                             <div className="item-card__body">
                                 <div className="item-card__img">
-                                    <img src="/image/product/01.png" alt="product picture" />
+                                    <img src="https://markys97.github.io/yourMeal/image/product/01.png" alt="product picture" />
                                 </div>
                                 <div className="item-card__info">
                                     <div className="item-card__name">Супер сырный</div>
