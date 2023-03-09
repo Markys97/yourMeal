@@ -1,0 +1,53 @@
+.main-body__title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 120%;
+  color: #000000;
+  margin-bottom: 16px;
+}
+.main__left {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-body__title {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 16px;
+  }
+  .main__left--short {
+    max-width: 145px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__row {
+    display: flex;
+    gap: 0 30px;
+  }
+  .main__left {
+    max-width: 300px;
+    width: 100%;
+    padding-top: 64px;
+  }
+  .main__left__left {
+    margin-bottom: unset;
+  }
+  .main__right {
+    flex-grow: 1;
+  }
+  .main-body__title {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__left {
+    padding-top: 60px;
+  }
+}/*# sourceMappingURL=body.css.map */

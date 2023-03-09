@@ -1,0 +1,33 @@
+.button {
+  background: #F2F2F3;
+  border-radius: 8px;
+  padding: 9px 45px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #000000;
+  border: none;
+}
+.button--productItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 100%;
+}
+.button--card {
+  background: #FF7020;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .button {
+    font-size: 16px;
+  }
+  .button--productItem {
+    height: 40px;
+  }
+}/*# sourceMappingURL=button.css.map */

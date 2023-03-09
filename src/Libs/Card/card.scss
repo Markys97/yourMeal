@@ -1,0 +1,202 @@
+.card{
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 16px 10px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+    &.isOpen{
+        .card__head{
+            padding-bottom: 8px;
+            border-bottom:1px solid #F2F2F3 ;
+        }
+    }
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 20px;
+
+    }
+    &__main{
+        display: none;
+        z-index: 5;
+        left: 0;
+        top: 48px;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 48px;
+        width: 100%;
+        height: auto;
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding:0 10px 16px ;
+        // border: 1px solid red;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+        clip-path: inset(0px 0px -10px -10px);
+    }
+    &__title{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: #000000;
+    }
+    &__total-product{
+        display: inline-block;
+        min-height: 16px;
+        border-radius: 6px;
+
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: #000000;
+        padding: 1px 13px;
+
+        background: #F2F2F3;
+    }
+    &__body{
+        margin-bottom: 13px;
+   
+    }
+
+    &__footer{
+        &-top{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 19px;
+        }
+        &-title,&-price{
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 130%;
+            color: #000000;
+        }
+        &-middle{
+            margin-bottom: 8px;
+        }
+        &-bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0 10px;
+        }
+        &-subtitle{
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 14px;
+            color: #000000;
+        }
+    }
+    &__close-button{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: #B1B1B1;
+    }
+
+   
+}
+
+.item-card{
+    padding-bottom: 11px;
+    border-bottom: 1px solid #F2F2F3;
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 10px;
+    }
+    &__body{
+        display: flex;
+        gap: 0 6px;
+    }
+    &__img{
+        width: 64px;
+        height: 52px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 100%;
+            
+        }
+
+    }
+    &__name{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #000000;
+        margin-bottom: 1px;
+    }
+    &__quantity{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #B1B1B1;
+        margin-bottom: 6px;
+        
+    }
+    &__price{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #000000;
+    }
+    &:last-child{
+        padding-bottom: 12px;
+    }
+    
+}
+
+.button-handler{
+    border: none;
+    outline: none;
+    width: 74px;
+    min-height: 30px;
+    border-radius: 8px;
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 10px;
+        padding: 7px 8px;
+    }
+}
+
+.order{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+    &::before{
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url('/public/image/icon/delivery.png') no-repeat;
+        background-size: cover;
+    }
+}

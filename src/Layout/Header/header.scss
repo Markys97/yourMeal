@@ -1,0 +1,161 @@
+.header{
+    min-height: 459px;
+    background: url("/public/image/picture/bg.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding:24px 0 30px;
+    margin-bottom: 30px;
+    &__wrapper-logo{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+    &__logo{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    &__row{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap:19px 0;
+
+    }
+    &__body{
+        max-width:300px;
+        h1{
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 120%;
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+            span{
+                color: #FF5C00;
+            }
+            
+        }
+    }
+    &__text{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    &__img{
+
+        width: 227px;
+        height: 229px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    
+
+}
+
+@media screen and (min-width:768px) {
+    .header{
+        min-height: 466px;
+        padding:24px 0 44px;
+        &__wrapper-logo{
+            margin-bottom: 23px;
+        }
+       
+        &__row{
+            padding: 0 39px;
+
+            flex-direction: row;
+            align-items: unset;
+            gap:0 10px;
+    
+        }
+        &__body{
+            
+            max-width:325px;
+            padding-top:27px;
+            h1{
+                font-size: 36px;
+                text-align: unset;
+                margin-bottom: 26px; 
+            }
+        }
+        &__text{
+            text-align: unset;
+        }
+    }
+    
+}
+
+
+@media screen and (min-width:1024px) {
+    .header{
+        padding:24px 0 63px;
+        margin-bottom: 40px;
+        &__wrapper-logo{
+            margin-bottom: 24px;
+        }
+       
+        &__row{
+            padding: 0 98px;
+            gap:0 2px;
+    
+        }
+        &__body{
+            max-width: 437px;
+            padding-top:46px;
+            h1{
+                font-size: 50px;
+                margin-bottom: 52px; 
+            }
+        }
+        &__img{
+            width: 326px;
+            height: 326px;
+            img{
+                max-width: none;
+                height: 100%;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (min-width:1440px) {
+    .header{
+        min-height: 466px;
+        &__row{
+            padding: 0;
+            gap:0 21px;
+            max-width: 784px;
+            margin: 0 auto;
+    
+        }
+       
+       
+    }
+    
+}
+@media screen and (min-width:1500px)  {
+    .header{
+        min-height: 660px;
+        &__wrapper-logo{
+            margin-bottom: 100px;
+        }   
+       
+    }
+    
+}

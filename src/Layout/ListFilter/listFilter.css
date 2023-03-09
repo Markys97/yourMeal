@@ -1,0 +1,48 @@
+.filterList {
+  margin-bottom: 30px;
+}
+.filterList__container {
+  padding-left: 10px;
+}
+.filterList__row {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+.filterList__scroll {
+  overflow: auto;
+}
+.filterList__scroll::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .filterList__container {
+    padding-left: 64px;
+  }
+  .filterList__row {
+    gap: 0 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .filterList {
+    margin-bottom: 40px;
+  }
+  .filterList__container {
+    padding-left: 32px;
+  }
+  .filterList__row {
+    gap: 0 24px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .filterList__container {
+    padding-left: 0;
+    max-width: 1231px;
+    margin: 0 auto;
+  }
+  .filterList__row {
+    gap: 10px 24px;
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=listFilter.css.map */
