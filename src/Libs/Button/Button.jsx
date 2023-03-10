@@ -1,9 +1,9 @@
 import './button.css'
 
-function Button({ownClass}) {
+function Button({ownClass,onClick,textButton}) {
   let customClass= ` button  ${ownClass}`
   return (
-    <button className={customClass}>Добавить</button>
+    <button onClick={onClick} className={customClass}>{textButton}</button>
   )
 }
 

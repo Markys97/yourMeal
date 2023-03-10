@@ -1,22 +1,50 @@
+import { useContext } from 'react';
+import {CardContext} from '../App/App'
 import './itemProduct.css';
 import Button from '../Button/Button';
 
 
-function ItemProduct() {
+function ItemProduct({dataProduct}) {
+
+    const {card,setCard} = useContext(CardContext)
+    const test = (e) => console.log(e.currentTarget)
+    const {id,name,price,quantity,imgProduct,categorie}=dataProduct
+
+    const addProduct = id =>{
+        let copieCard=[...card];
+        let AllProductIdInCard= copieCard.map(item=> item.id)
+        if(AllProductIdInCard.includes(id)){
+           let finalCard= copieCard.map((productInCard)=>{
+                if(productInCard.id === id){
+                    productInCard.quantity +=1
+                }
+
+                return productInCard
+            })
+
+            setCard(prev=> [...prev])
+        }else{
+            setCard(prev=> [...prev,{id,quantity:1}])
+        }
+    }
   return (
     <div className="itemProduct">
         <div className="itemProduct__content">
             <div className="itemProduct__img">
-                <img src="https://markys97.github.io/yourMeal/image/product/01.png" alt="product item" />
+                <img src={imgProduct} alt="product item" />
             </div>
-            <div className="itemProduct__price">689₽</div>
+            <div className="itemProduct__price">{price}₽</div>
             <div className="itemProduct__name">
-                Мясная бомба
+                {name}
             </div>
             <div className="itemProduct__quantity">
-                520г
+                {quantity}
             </div>
-            <Button ownClass="itemProduct__button button--productItem"/>
+            <Button
+             ownClass="itemProduct__button button--productItem"
+             onClick={e=>addProduct(id)}
+             textButton="Добавить"
+             />
         </div>
     </div>
   )

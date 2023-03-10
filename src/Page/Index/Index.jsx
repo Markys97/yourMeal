@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../Layout/Header/Header';
 import ListFilter from '../../Layout/ListFilter/ListFilter';
 import Body from '../../Layout/Body/Body';
+import Footer from '../../Layout/Footer/Footer';
 
 function Index() {
   return (
@@ -9,8 +10,7 @@ function Index() {
         <Header/>
         <ListFilter/>
         <Body/>
-
-        
+        <Footer/>
     </>
   )
 }

@@ -1,3 +1,6 @@
+.main {
+  margin-bottom: 80px;
+}
 .main-body__title {
   font-family: "Nunito";
   font-style: normal;
@@ -6,6 +9,18 @@
   line-height: 120%;
   color: #000000;
   margin-bottom: 16px;
+}
+.main-body__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 130%;
+  color: #000000;
 }
 .main__left {
   margin-bottom: 30px;
@@ -26,6 +41,9 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .main {
+    margin-bottom: 100px;
+  }
   .main__row {
     display: flex;
     gap: 0 30px;

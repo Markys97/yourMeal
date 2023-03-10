@@ -1,0 +1,145 @@
+.footer {
+  background: #FFFFFF;
+  padding: 24px 0 26px;
+}
+.footer__top {
+  margin-bottom: 24px;
+}
+.footer__logo {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 196px;
+  height: 38px;
+  margin-bottom: 24px;
+}
+.footer__logo svg {
+  max-width: 100%;
+  height: auto;
+}
+.footer__title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+  margin-bottom: 8px;
+}
+.footer__tel {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #000000;
+}
+.footer__info {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+}
+.footer__info:not(:last-child) {
+  margin-bottom: 4px;
+}
+.footer__item + .footer__item {
+  margin-top: 24px;
+}
+.footer__icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 16px;
+}
+.footer__icon {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+}
+.footer__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tel {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.tel::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url("/public/image/icon/Call.svg") no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    background: #FFFFFF;
+    padding: 40px 0 26px;
+  }
+  .footer__top {
+    margin-bottom: 40px;
+  }
+  .footer__top-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+    max-width: 455px;
+  }
+  .footer__logo {
+    margin-bottom: 36px;
+  }
+  .footer__item + .footer__item {
+    margin-top: 0;
+  }
+  .footer__icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 52px 0 39px;
+  }
+  .footer__top {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__top-right {
+    gap: 0 50px;
+    max-width: unset;
+  }
+  .footer__logo {
+    margin-bottom: unset;
+    width: 300px;
+    height: 58px;
+  }
+  .footer__title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .footer__tel {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer {
+    padding: 52px 0 40px;
+  }
+  .footer__top {
+    margin-bottom: 34px;
+  }
+  .footer__top-right {
+    gap: 0 126px;
+  }
+}/*# sourceMappingURL=footer.css.map */

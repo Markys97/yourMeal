@@ -1,14 +1,15 @@
 import './listProduct.css'
 import ItemProduct from '../../Libs/ItemProduct/ItemProduct'
 
-function ListProduct() {
+
+function ListProduct({products}) {
+
   return (
     <div className=" listProduct">
-        <ItemProduct/>
-        <ItemProduct/>
-        <ItemProduct/>
-        <ItemProduct/>
-        <ItemProduct/>
+       
+        {
+          products.map((product,index) => <ItemProduct key={index} dataProduct={product}/> )
+        }
     </div>
   )
 }
