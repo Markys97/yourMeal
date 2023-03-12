@@ -65,7 +65,7 @@ let listProduct=[
     categorie:'Бургеры'
 
   },
-
+// other categorie
   {
     id:7, 
     name:'картофель фри',
@@ -86,13 +86,124 @@ let listProduct=[
   },
   {
     id:9, 
-    name:'чипсы',
+    name:'яйца',
     price:160,
+    quantity:'210г',
+    imgProduct:'https://markys97.github.io/yourMeal/image/product/51.jpeg',
+    categorie:'Закуски'
+
+  },
+  {
+    id:10, 
+    name:'ветчина',
+    price:560,
     quantity:'210г',
     imgProduct:'https://markys97.github.io/yourMeal/image/product/56.jpeg',
     categorie:'Закуски'
 
   },
+  {
+    id:11, 
+    name:'Закуски А',
+    price:260,
+    quantity:'210г',
+    imgProduct:'https://markys97.github.io/yourMeal/image/product/55.jpeg',
+    categorie:'Закуски'
+
+  },
+  {
+    id:12, 
+    name:'рыба',
+    price:160,
+    quantity:'210г',
+    imgProduct:'https://markys97.github.io/yourMeal/image/product/54.jpeg',
+    categorie:'Закуски'
+
+  },
+  {
+    id:13, 
+    name:'Закуски С',
+    price:360,
+    quantity:'210г',
+    imgProduct:'https://markys97.github.io/yourMeal/image/product/52.jpeg',
+    categorie:'Закуски'
+
+  },
+  {
+    id:13, 
+    name:'Закуски Д',
+    price:360,
+    quantity:'210г',
+    imgProduct:'https://markys97.github.io/yourMeal/image/product/53.jpeg',
+    categorie:'Закуски'
+
+  },
+// other categorie
+{
+  id:14, 
+  name:'Хот-доги A',
+  price:160,
+  quantity:'210г',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/10.png',
+  categorie:'Хот-доги'
+
+},
+{
+  id:15, 
+  name:'Хот-доги B',
+  price:360,
+  quantity:'110г',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/11.png',
+  categorie:'Хот-доги'
+
+},
+{
+  id:16, 
+  name:'Хот-доги C',
+  price:360,
+  quantity:'110г',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/12.png',
+  categorie:'Хот-доги'
+
+},
+// other categorie
+{
+  id:17, 
+  name:'Пицца A',
+  price:360,
+  quantity:'110г',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/60.jpeg',
+  categorie:'Пицца'
+
+},
+{
+  id:18, 
+  name:'Пицца B',
+  price:660,
+  quantity:'110г',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/61.png',
+  categorie:'Пицца'
+
+},
+{
+  id:19, 
+  name:'Пицца C',
+  price:460,
+  quantity:'110г',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/62.jpeg',
+  categorie:'Пицца'
+
+},
+{
+  id:20, 
+  name:'Пицца D',
+  price:1000,
+  quantity:'110г',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/63.jpeg',
+  categorie:'Пицца'
+
+},
+
 ]
 
 
