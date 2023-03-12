@@ -172,7 +172,7 @@ let listProduct=[
   name:'Пицца A',
   price:360,
   quantity:'110г',
-  imgProduct:'https://markys97.github.io/yourMeal/image/product/60.jpeg',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/60.jpg',
   categorie:'Пицца'
 
 },
@@ -190,7 +190,7 @@ let listProduct=[
   name:'Пицца C',
   price:460,
   quantity:'110г',
-  imgProduct:'https://markys97.github.io/yourMeal/image/product/62.jpeg',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/62.jpg',
   categorie:'Пицца'
 
 },
@@ -199,7 +199,7 @@ let listProduct=[
   name:'Пицца D',
   price:1000,
   quantity:'110г',
-  imgProduct:'https://markys97.github.io/yourMeal/image/product/63.jpeg',
+  imgProduct:'https://markys97.github.io/yourMeal/image/product/63.jpg',
   categorie:'Пицца'
 
 },
