@@ -3,6 +3,7 @@ import './App.css'
 import Index  from '../../Page/Index/Index'
 import Modal from '../Modal/Modal'
 import ProductPreview from '../ProductPreview/ProductPreview'
+import Form from '../Form/Form'
 import { ProductContext } from '../..'
 
 export const IngredienContext = createContext({})
@@ -68,6 +69,8 @@ function App() {
   const [card,setCard]=useState([]);
   const [isOpenProductPreview, setIsOpenProductPreview]= useState(false)
   const [isOpenModal, setIsOpenModal]= useState(false)
+  const [isWantBuy, setIsWantBuy]= useState(false)
+
 
   const getProductPreview = (id,products)=>{
     if(id !== null){
@@ -101,7 +104,8 @@ function App() {
                 isOpenModal &&(
                     <Modal>
                         { isOpenProductPreview && <ProductPreview dataProduct={currentProductPreview} />}
-                </Modal>
+                        { isWantBuy &&  <Form/>}
+                    </Modal>
                 )
             }
         </ModalContext.Provider>
