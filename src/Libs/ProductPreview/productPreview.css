@@ -1,0 +1,164 @@
+.productPreview__content {
+  padding: 32px 10px;
+}
+.productPreview__title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 120%;
+  color: #000000;
+  margin-bottom: 12px;
+}
+.productPreview__main {
+  margin-bottom: 4px;
+}
+.productPreview__img {
+  width: 300px;
+  height: 232px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.productPreview__img img {
+  width: 100%;
+  height: 100%;
+}
+.productPreview__description {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.productPreview__subtitle {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 130%;
+  color: #000000;
+  margin-bottom: 4px;
+}
+.productPreview__list {
+  margin-bottom: 4px;
+}
+.productPreview__list li + li {
+  margin-top: 2;
+}
+.productPreview__list-item {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  color: #000000;
+}
+.productPreview__footer {
+  display: flex;
+  gap: 0 8px;
+}
+.productPreview__footer-left {
+  flex-grow: 1;
+}
+.productPreview__detail {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  color: #B1B1B1;
+}
+.productPreview__price {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: right;
+  color: #000000;
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .productPreview__content {
+    padding: 16px 16px 24px;
+  }
+  .productPreview__title {
+    margin-bottom: 16px;
+  }
+  .productPreview__main {
+    margin-bottom: 22px;
+    display: flex;
+    gap: 0 8px;
+  }
+  .productPreview__img {
+    width: 226px;
+    height: 180px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .productPreview__footer {
+    align-items: center;
+  }
+  .productPreview__footer-right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .productPreview__footer-left {
+    max-width: 218px;
+  }
+  .productPreview__price {
+    text-align: unset;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .productPreview__content {
+    padding: 24px 24px 36px;
+  }
+  .productPreview__title {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+  .productPreview__main {
+    margin-bottom: 40px;
+    gap: 0 16px;
+  }
+  .productPreview__img {
+    width: 276px;
+    height: 220px;
+  }
+  .productPreview__description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .productPreview__subtitle {
+    font-size: 12px;
+  }
+  .productPreview__list-item {
+    font-size: 12px;
+  }
+  .productPreview__detail {
+    font-size: 12px;
+  }
+  .productPreview__footer {
+    gap: 0 16px;
+  }
+  .productPreview__footer-right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .productPreview__footer-left {
+    max-width: 276px;
+  }
+  .productPreview__price {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=productPreview.css.map */

@@ -1,4 +1,4 @@
-import React,{createContext,useState } from 'react';
+import React,{createContext } from 'react';
 
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -63,6 +63,34 @@ let listProduct=[
     quantity:'510г',
     imgProduct:'https://markys97.github.io/yourMeal/image/product/06.png',
     categorie:'Бургеры'
+
+  },
+
+  {
+    id:7, 
+    name:'картофель фри',
+    price:160,
+    quantity:'210г',
+    imgProduct:'https://markys97.github.io/yourMeal/image/product/08.png',
+    categorie:'Закуски'
+
+  },
+  {
+    id:8, 
+    name:'чипсы',
+    price:160,
+    quantity:'210г',
+    imgProduct:'https://markys97.github.io/yourMeal/image/product/07.png',
+    categorie:'Закуски'
+
+  },
+  {
+    id:9, 
+    name:'чипсы',
+    price:160,
+    quantity:'210г',
+    imgProduct:'https://markys97.github.io/yourMeal/image/product/56.jpeg',
+    categorie:'Закуски'
 
   },
 ]

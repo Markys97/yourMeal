@@ -1,8 +1,10 @@
+import {useState} from 'react'
 import './productInCard.css'
 import ButtonHandlerQuantity from '../ButtonHandlerQuantity/ButtonHandlerQuantity'
 
-function ProductInCard({dataProduct}) {
-    let {name,price,quantity,categorie,imgProduct}=dataProduct
+function ProductInCard({dataProduct,number}) {
+    let {id,name,price,quantity,categorie,imgProduct}=dataProduct;
+
   return (
     <div className="item-card">
         <div className="item-card__row">
@@ -17,7 +19,7 @@ function ProductInCard({dataProduct}) {
                 </div>
             </div>
             <div className="item-card__handler-quantity">
-                <ButtonHandlerQuantity/>
+                <ButtonHandlerQuantity idProduct={id} />
             </div>
         </div>
     </div>

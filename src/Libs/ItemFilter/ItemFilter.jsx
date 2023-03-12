@@ -12,7 +12,6 @@ function ItemFilter({data,idItem,filter,onClick}) {
             return itemFilter
         })
 
-        console.log(newFilter)
         onClick(newFilter)
     }
   return (

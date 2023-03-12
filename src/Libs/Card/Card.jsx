@@ -82,64 +82,71 @@ function Card() {
     let totalProductInCard = getTotalProductInCard()
     let listProductInCard=getListProductInCard()
 
-  return (
-    <div className={`${cardClassName}  ${conditonClass}`} >
-        <div className="card__content" >
-            <div onClick={handlerOpenCard} className="card__head">
-                <div className="card__title">Корзина</div>
-                <div className="card__total-product">
-                    {totalProductInCard}
-                </div>
-            </div>
-            {
-                isOpencard && (
-                    <div className="card__main">
-                        {
-                            (totalProductInCard!==0) ?(
-                                <div className="card__main-with-product">
-                                    <div className="card__body">
-                                       
-                                        {
-                                            listProductInCard.map((product,id)=> <ProductInCard key={id} dataProduct={product}/>)
-                                        }
-                                    </div>
-                                    
-                                    <div className="card__footer">
-                                        <div className="card__footer-top">
-                                            <div className="card__footer-title">Итого</div>
-                                            <div className="card__footer-price">{totalCardPrice}₽</div>
-                                        </div>
-        
-                                        <div className="card__footer-middle">
-                                            
-                                            <Button
-                                                ownClass="card__footer-btn button--card"
-                                                onClick={''}
-                                                textButton="Оформить заказ"
-                                            />
-                                        </div>
-        
-                                        <div className="card__footer-bottom">
-                                            <div className="card__footer-subtitle order">Бесплатная доставка</div>
-                                            <div onClick={()=>setIsOpenCard(false)} className="card__close-button">Свернуть</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ):(
-                                <div className="card__main-empty">
-                                    Тут пока пусто :(
-                                </div>
-                            )
-                        }
-                        
-                    
+    return (
+        <div className={`${cardClassName}  ${conditonClass}`} >
+            <div className="card__content" >
+                <div onClick={handlerOpenCard} className="card__head">
+                    <div className="card__title">Корзина</div>
+                    <div className="card__total-product">
+                        {totalProductInCard}
                     </div>
-                )
-            }
-           
+                </div>
+                {
+                    isOpencard && (
+                        <div className="card__main">
+                            {
+                                (totalProductInCard!==0) ?(
+                                    <div className="card__main-with-product">
+                                        <div className="card__body">
+                                        
+                                            {
+                                                listProductInCard.map((product,id)=> {
+                                                return  <ProductInCard
+                                                    key={id}
+                                                    dataProduct={product}
+                                                
+                                                    />
+                                                    
+                                                })
+                                            }
+                                        </div>
+                                        
+                                        <div className="card__footer">
+                                            <div className="card__footer-top">
+                                                <div className="card__footer-title">Итого</div>
+                                                <div className="card__footer-price">{totalCardPrice}₽</div>
+                                            </div>
+            
+                                            <div className="card__footer-middle">
+                                                
+                                                <Button
+                                                    ownClass="card__footer-btn button--card"
+                                                    onClick={''}
+                                                    textButton="Оформить заказ"
+                                                />
+                                            </div>
+            
+                                            <div className="card__footer-bottom">
+                                                <div className="card__footer-subtitle order">Бесплатная доставка</div>
+                                                <div onClick={()=>setIsOpenCard(false)} className="card__close-button">Свернуть</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ):(
+                                    <div className="card__main-empty">
+                                        Тут пока пусто :(
+                                    </div>
+                                )
+                            }
+                            
+                        
+                        </div>
+                    )
+                }
+            
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Card
