@@ -1,51 +1,74 @@
 import './form.css';
 import Button from '../Button/Button';
-
+import Radio from '../Radio/Radio';
+import Input from '../Input/Input';
 function Form() {
   return (
     <form className='form'>
        <div className="form__content">
             <div className="form__title">Доставка</div>
             <div className="form__body">
-                <div className="input">
-                    <input type="text" name='name' placeholder='Ваше имя'/>
-                </div>
-                <div className="input">
-                    <input type="text" name='tel' placeholder='Телефон имя'/>
+                <div className="form__inputs">
+                    <Input
+                        type="text"
+                        name="name"
+                        placeholder="Ваше имя"
+                        value=""
+                    />
+                     <Input
+                        type="text"
+                        name="tel"
+                        placeholder="Телефон"
+                        value=""
+                    />
+                   
                 </div>
                 <div className="form__radios">
-                    <div className="radio">
-                        <label className='radio__label' htmlFor="yourSelf">
-                            <input type="radio" className="radio__input" name='howGetOrder' />
-                            <span className='radio__cercle'></span>
-                            <span className='radio__text'>Самовывоз</span>
-                        </label>
-                    </div>
-                    <div className="radio">
-                        <label className='radio__label' htmlFor="yourSelf">
-                            <input type="radio" className="radio__input" name='howGetOrder' />
-                            <span className='radio__cercle'></span>
-                            <span className='radio__text'>Доставка</span>
-                        </label>
-                    </div>
+                  
+                    <Radio
+                        id="yourSelf"
+                        label="Самовывоз"
+                        name="howGetOrder"
+                        checked="checked"
+                    />
+                    <Radio
+                        id="order"
+                        label="Доставка"
+                        name="howGetOrder"
+                    />
+                    
+                   
                 </div>
                 <div className="form__delivery">
-                    <div className="input">
-                        <input type="text" name='addres' placeholder='Улица, дом, квартира'/>
-                    </div>
+                    <Input
+                        type="text"
+                        name="addres"
+                        placeholder="Улица, дом, квартира"
+                        value=""
+                    />
+                    
                     <div className="form__delivery-house">
-                        <div className="input">
-                            <input type="text" name='etag' placeholder=''/>
-                        </div>
-                        <div className="input">
-                            <input type="text" name='number-house' placeholder='Домофон'/>
-                        </div>
+                        
+                        <Input
+                            type="text"
+                            name="etag"
+                            placeholder="Этаж"
+                            value=""
+                        />
+                        <Input
+                            type="text"
+                            name="number-house"
+                            placeholder="Домофон"
+                            value=""
+                        />
                     </div>
                 </div>
                 <div className="form__submit">
                     <Button
                      type="submit"
+                     ownClass="button-submit"
                      textButton="Оформить"/>
+                    
                 </div>
             </div>
        </div>

@@ -1,0 +1,51 @@
+.radio{
+   
+    input{
+        display: none;
+        &:checked ~ .radio__cercle{
+           
+            &::before{
+                background: #000000;
+            }
+        }
+    }
+    &__label{
+        display: inline-flex;
+        align-items: center;
+        gap: 0 8px;
+    }
+    &__text{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: #000000; 
+    }
+    &__cercle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 12px;
+        height: 12px;
+        background: #FFFFFF;
+        border: 1px solid #F2F2F3;
+        border-radius: 50%;
+        position: relative;
+
+        &::before{
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+            border-radius: 50%;
+            transition: all 300ms;
+
+        }
+    }
+}

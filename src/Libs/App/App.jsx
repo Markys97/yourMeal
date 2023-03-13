@@ -68,8 +68,8 @@ function App() {
   const[ingredients, setIngredients]= useState(listIngredien)
   const [card,setCard]=useState([]);
   const [isOpenProductPreview, setIsOpenProductPreview]= useState(false)
-  const [isOpenModal, setIsOpenModal]= useState(false)
-  const [isWantBuy, setIsWantBuy]= useState(false)
+  const [isOpenModal, setIsOpenModal]= useState(true)
+  const [isWantBuy, setIsWantBuy]= useState(true)
 
 
   const getProductPreview = (id,products)=>{

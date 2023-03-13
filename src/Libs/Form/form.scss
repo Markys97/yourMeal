@@ -1,0 +1,59 @@
+.form{
+
+    &__content{
+        padding: 32px 10px;
+        max-width: 300px;
+    }
+    &__title{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: #000000;
+        margin-bottom: 18px;   
+    }
+    .input + .input{
+        margin-top: 8px;
+    }
+    &__inputs{
+        margin-bottom: 24px;
+    }
+    &__radios{
+        margin-bottom: 24px;
+        .radio + .radio{
+            margin-top: 8;
+        }
+        
+    }
+
+    &__delivery{
+        flex-direction: column;
+        gap: 8px 0;
+        display: flex;
+        &-house{
+           display: grid;
+           gap: 0 8px;
+           grid-template-columns: repeat(2,1fr);
+         
+           .input + .input{
+            margin: 0;
+           }
+
+        }
+    }
+    &__submit{
+        margin-top: 9vh;
+    }
+}
+
+
+
+
+
+
+.button-submit{
+    background: #FF7020!important;
+    color: #FFFFFF!important;
+    width: 100%!important;
+}
