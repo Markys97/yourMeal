@@ -1,9 +1,9 @@
 import './input.css'
 
-function Input({type,name,placeholder,value}) {
+function Input({type,name,placeholder,register}) {
   return (
     <div className="input">
-        <input type={type} name={name} placeholder={placeholder} value={value}/>
+        <input type={type} name={name} placeholder={placeholder} {...register(name)}/>
     </div>
   )
 }

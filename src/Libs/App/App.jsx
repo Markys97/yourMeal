@@ -1,4 +1,4 @@
-import {useContext,useState,createContext} from 'react'
+import {useContext,useState,createContext,useEffect} from 'react'
 import './App.css'
 import Index  from '../../Page/Index/Index'
 import Modal from '../Modal/Modal'
@@ -63,13 +63,12 @@ function App() {
   ]
 
   const listProduct = useContext(ProductContext)
-
   const [idProductPreview, setIdProductPreview] = useState(null)
   const[ingredients, setIngredients]= useState(listIngredien)
   const [card,setCard]=useState([]);
   const [isOpenProductPreview, setIsOpenProductPreview]= useState(false)
-  const [isOpenModal, setIsOpenModal]= useState(true)
-  const [isWantBuy, setIsWantBuy]= useState(true)
+  const [isOpenModal, setIsOpenModal]= useState(false)
+  const [isWantBuy, setIsWantBuy]= useState(false)
 
 
   const getProductPreview = (id,products)=>{
@@ -82,7 +81,16 @@ function App() {
     }
   }
 
-    const currentProductPreview = getProductPreview(idProductPreview,listProduct)
+ const currentProductPreview = getProductPreview(idProductPreview,listProduct)
+
+    useEffect(()=>{
+        if(isOpenModal){
+            document.body.classList.add('modal-is-open')
+        }else{
+            document.body.classList.remove('modal-is-open')
+        }
+    },[isOpenModal])
+
 
 
   
@@ -90,6 +98,7 @@ function App() {
     stateGlobalInModal:{
         productPreview:[isOpenProductPreview, setIsOpenProductPreview],
         modal:[isOpenModal, setIsOpenModal],
+        formOrder:[isWantBuy, setIsWantBuy],
         currentProductPreview:[idProductPreview, setIdProductPreview]
     }
   }

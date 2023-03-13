@@ -17,4 +17,18 @@
   font-size: 10px;
   line-height: 130%;
   color: #B1B1B1;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    height: 40px;
+  }
+  .input input {
+    font-size: 12px;
+    transition: all 300ms;
+  }
+  .input input:focus {
+    border: 1px solid #FFAB08;
+    color: #000000;
+  }
 }/*# sourceMappingURL=input.css.map */

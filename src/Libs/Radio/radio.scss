@@ -13,6 +13,7 @@
         display: inline-flex;
         align-items: center;
         gap: 0 8px;
+        cursor: pointer;
     }
     &__text{
         font-family: 'Nunito';
@@ -47,5 +48,16 @@
             transition: all 300ms;
 
         }
+    }
+}
+
+@media screen and (min-width:1024px){
+    .radio{
+   
+        &__text{
+            font-size: 12px;
+            line-height: 16px;
+        }
+        
     }
 }

@@ -8,6 +8,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0 8px;
+  cursor: pointer;
 }
 .radio__text {
   font-family: "Nunito";
@@ -40,4 +41,11 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
   transition: all 300ms;
+}
+
+@media screen and (min-width: 1024px) {
+  .radio__text {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }/*# sourceMappingURL=radio.css.map */

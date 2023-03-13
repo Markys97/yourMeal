@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 
 import ProductInCard from '../ProductInCard/ProductInCard';
 
-import {CardContext} from '../App/App'
+import {CardContext,ModalContext} from '../App/App'
 
 import {ProductContext} from '../../index'
 
@@ -12,9 +12,13 @@ import {ProductContext} from '../../index'
 function Card() {
     const[isOpencard, setIsOpenCard]= useState(false)
     const listProduct = useContext(ProductContext)
+    const {stateGlobalInModal:{
+        formOrder:[isWantBuy,setIsWantBuy],
+        modal:[isOpenModal, setIsOpenModal],
+        productPreview:[isOpenProductPreview, setIsOpenProductPreview],
+    }} =useContext(ModalContext)
 
     const {card,setCard} = useContext(CardContext)
-
     let cardClassName= isOpencard ? 'card isOpen' : 'card'
     
     window.addEventListener('resize', e =>{
@@ -24,6 +28,14 @@ function Card() {
     const handlerOpenCard= ()=> setIsOpenCard(prev=>{
         return !prev
     })
+
+    const openFormOrder= ()=>{
+        if(isOpenProductPreview){
+            setIsOpenProductPreview(() => false)
+        }
+        setIsWantBuy(()=> true)
+        setIsOpenModal(()=> true)
+    }
 
     let conditonClass= ((window.screen.width >=768 && window.screen.width < 1024) && isOpencard) && 'long';
     
@@ -121,7 +133,7 @@ function Card() {
                                                 
                                                 <Button
                                                     ownClass="card__footer-btn button--card"
-                                                    onClick={''}
+                                                    onClick={openFormOrder}
                                                     textButton="Оформить заказ"
                                                 />
                                             </div>
