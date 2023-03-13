@@ -1,17 +1,23 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import './form.css';
 import Button from '../Button/Button';
 import Radio from '../Radio/Radio';
 import Input from '../Input/Input';
 function Form() {
-    const [isDelivery,setIsDeleivery] = useState(() => false);
+    const [typeOrder,setTypeOrder] = useState(() => 'alone');
     const getTypeOrder = (e) => {
         if(e.target.checked){
-            console.log(e.target.value)
+            setTypeOrder(e.target.value)
         }
     }
 
     const register =() => console.log('mama')
+
+    useEffect(() =>{
+       let defaultRadio= document.querySelector(`input[value=${typeOrder}]`)
+       defaultRadio.setAttribute('checked','true')
+    },[])
+
   return (
     <form className='form'>
        <div className="form__content">
@@ -40,7 +46,7 @@ function Form() {
                         name="howGetOrder"
                         onchange={getTypeOrder}
                         value='alone'
-                        checked={true}
+                        isChecked={true}
 
                       
                        
@@ -51,20 +57,22 @@ function Form() {
                         name="howGetOrder"
                         onchange={getTypeOrder}
                         value='delivery'
-                        checked={false}
+                       
                     />
                     
                    
                 </div>
-                <div className="form__delivery">
-                    <Input
-                        type="text"
-                        name="addres"
-                        placeholder="Улица, дом, квартира"
-                        register={register}
-                    />
-                    {
-                        isDelivery &&(
+                {
+                     typeOrder!== 'alone' && (
+                        <div className="form__delivery">
+                            <Input
+                                type="text"
+                                name="addres"
+                                placeholder="Улица, дом, квартира"
+                                register={register}
+                            />
+                            
+                            
                             <div className="form__delivery-house">
                             
                                 <Input
@@ -80,11 +88,13 @@ function Form() {
                                     register={register}
                                 />
                             </div>
-                        )
-                    }
-                   
-                </div>
-                <div className="form__submit">
+    
+                       
+                        </div>
+                     )
+                }
+
+                <div className={'form__submit' + " "+ ((typeOrder=== 'alone')&& 'form__submit--fare' )}>
                     <Button
                      type="submit"
                      ownClass="button-submit"

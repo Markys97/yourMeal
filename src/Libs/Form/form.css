@@ -1,6 +1,6 @@
 .form__content {
   padding: 32px 10px;
-  max-width: 300px;
+  width: 100%;
 }
 .form__title {
   font-family: "Nunito";
@@ -39,6 +39,9 @@
 .form__submit {
   margin-top: 9vh;
 }
+.form__submit--fare {
+  margin-top: 137px !important;
+}
 .form__wrapper-img {
   display: none;
 }
@@ -55,6 +58,7 @@
   }
   .form__content {
     padding: 20px 16px 29px;
+    max-width: 300px;
   }
   .form__inputs {
     margin-bottom: 16px;

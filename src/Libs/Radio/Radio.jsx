@@ -1,13 +1,13 @@
 import './radio.css'
 
-function Radio({id,name,label ,onchange,value,checked}) {
+function Radio({id,name,label ,onchange,value,isChecked}) {
   return (
     <div className="radio">
         <label className='radio__label' htmlFor={id}>
             <input
-             onChange={(e)=>onchange(e)}
+              // checked={isChecked}
+             onChange={(e)=> onchange(e)}
              value={value}
-            //  checked={checked}
              type="radio" className="radio__input" 
              name={name} id={id} />
             <span  className='radio__cercle'></span>
