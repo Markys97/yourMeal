@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import { useForm } from 'react-hook-form';
 import './form.css';
 import Button from '../Button/Button';
 import Radio from '../Radio/Radio';
@@ -11,15 +12,25 @@ function Form() {
         }
     }
 
-    const register =() => console.log('mama')
 
     useEffect(() =>{
        let defaultRadio= document.querySelector(`input[value=${typeOrder}]`)
        defaultRadio.setAttribute('checked','true')
     },[])
 
+    const { register,handleSubmit,formState:{errors,isSubmitted,isValid},formState}= useForm();
+    const sendOrder = data => {
+       
+        if( isSubmitted && isSubmitted){
+            alert(JSON.stringify(data))
+        }
+    }
+
+    useEffect(()=>{
+        console.log(formState,11)
+    },[formState])
   return (
-    <form className='form'>
+    <form className='form' onSubmit={handleSubmit(sendOrder)}>
        <div className="form__content">
             <div className="form__title">Доставка</div>
             <div className="form__body">
@@ -29,12 +40,18 @@ function Form() {
                         name="name"
                         placeholder="Ваше имя"
                         register={register}
+                        require={{required:'Обязательное поле'}}
+                        errors={errors}
+                       
+                       
                     />
                      <Input
                         type="text"
                         name="tel"
                         placeholder="Телефон"
                         register={register}
+                        require={{required:'Обязательное поле'}}
+                        errors={errors}
                     />
                    
                 </div>
@@ -47,6 +64,7 @@ function Form() {
                         onchange={getTypeOrder}
                         value='alone'
                         isChecked={true}
+                        register={register}
 
                       
                        
@@ -57,6 +75,7 @@ function Form() {
                         name="howGetOrder"
                         onchange={getTypeOrder}
                         value='delivery'
+                        register={register}
                        
                     />
                     
@@ -70,6 +89,8 @@ function Form() {
                                 name="addres"
                                 placeholder="Улица, дом, квартира"
                                 register={register}
+                                require={{required:'Обязательное поле'}}
+                                errors={errors}
                             />
                             
                             
@@ -77,13 +98,15 @@ function Form() {
                             
                                 <Input
                                     type="text"
-                                    name="etag"
+                                    name="number-house"
                                     placeholder="Этаж"
                                     register={register}
+                                    require={{required:'Обязательное поле'}}
+                                    errors={errors}
                                 />
                                 <Input
                                     type="text"
-                                    name="number-house"
+                                    name="number-door"
                                     placeholder="Домофон"
                                     register={register}
                                 />

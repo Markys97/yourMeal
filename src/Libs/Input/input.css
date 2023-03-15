@@ -18,6 +18,10 @@
   color: #B1B1B1;
 }
 
+.error {
+  border-color: red !important;
+}
+
 @media screen and (min-width: 1024px) {
   .input {
     height: 40px;
